@@ -1,10 +1,15 @@
 package com.company;
+import java.text.FieldPosition;
+import java.text.ParsePosition;
 import java.util.Scanner;
+import java.text.NumberFormat;
+import java.text.DecimalFormat;
 public class Main {
         
     public static void main(String[] args) {
 	// write your code here
-        UnitTwoReview();
+        //UnitTwoReview();
+        Task11();
     }
 
     public static void Task1(){
@@ -126,6 +131,42 @@ public class Main {
         System.out.println(busesNeeded + " buses are needed.");
         peopleLeft = people % 20;
         System.out.println(peopleLeft + " need a ride home");
+    }
+    public static void Task10(){
+        //Miles per Gallon calculator
+        Scanner user_input = new Scanner(System.in);
+        DecimalFormat decimalFormat = new DecimalFormat("0.###");
+
+        double gasUsed, startNumber, endNumber;
+        double milesPerGallon;
+
+        System.out.print("Enter the gas used: ");
+        gasUsed = user_input.nextDouble();
+        System.out.print("Initial Odometer Reading: ");
+        startNumber = user_input.nextDouble();
+        System.out.print("Final Odometer Reading: ");
+        endNumber = user_input.nextDouble();
+
+        milesPerGallon = (endNumber - startNumber) / gasUsed;
+
+        System.out.print("Miles per Gallon: " + decimalFormat.format(milesPerGallon));
+    }
+    public static void Task11(){
+        int firstThree, secondThree = 0, lastFour;
+        boolean loop = true;
+
+        firstThree = ((int)(8 * Math.random()) * 100) + ((int)(8 * Math.random()) * 10)+ (int)(8 * Math.random());
+
+        while(loop) {
+            secondThree = ((int) (8 * Math.random()) * 100) + ((int) (10 * Math.random()) * 10) + (int) (10 * Math.random());
+            if (secondThree <= 742) {
+            loop = false;
+            }
+        }
+
+        lastFour = ((int)(10 * Math.random()) * 1000) + ((int)(10 * Math.random()) * 100) + ((int)(10 * Math.random()) * 10) + (int)(10 * Math.random());
+
+        System.out.println(firstThree + "-" + secondThree + "-" + lastFour);
     }
 
     public static void UnitTwoReview(){
