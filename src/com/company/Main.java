@@ -130,7 +130,7 @@ public class Main {
 
     public static void UnitTwoReview(){
         Task6();
-        Task7();   //
+        Task7();
         Task8();
         Task5();
         Task9();
