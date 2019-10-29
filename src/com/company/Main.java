@@ -24,7 +24,6 @@ public class Main {
         }else{
             System.out.println("No awards");
         }
-        
-    }
+    } //test
 
 }
