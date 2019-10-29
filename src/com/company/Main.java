@@ -6,7 +6,7 @@ public class Main {
         
     public static void main(String[] args) {
 	// write your code here
-
+        awards();
     }
     public static void awards(){
         Scanner userInput = new Scanner(System.in);
