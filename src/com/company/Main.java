@@ -15,11 +15,11 @@ public class Main {
         System.out.printf("Enter GPA");
         gpa = userInput.nextDouble();
 
-        if(gpa > 3.8){
+        if(gpa >= 3.8){
             System.out.println("Magna cum laude");
-        }else if(gpa > 3.65){
+        }else if(gpa >= 3.65){
             System.out.println("Summa cum laude");
-        }else if(gpa > 3.5){
+        }else if(gpa >= 3.5){
             System.out.println("Cum laude");
         }else{
             System.out.println("No awards");
