@@ -8,6 +8,7 @@ public class Main {
     public static void main(String[] args) throws InterruptedException{
 	// write your code here
         multiplicationTable();
+        slotMachine();
     }
 
     public static void testScores(){
@@ -58,6 +59,17 @@ public class Main {
                 System.out.format("%5s", j);
             }
             System.out.println();
+        }
+    }
+    public static void slotMachine(){
+        Scanner userInput = new Scanner(System.in);
+
+        System.out.println((int) (Math.random() * 10) + "   " + (int) (Math.random() * 10) + "   " + (int) (Math.random() * 10));
+        System.out.print("Play again?: ");
+
+        while(userInput.nextLine().contains("y")) {
+            System.out.println((int) (Math.random() * 10) + "   " + (int) (Math.random() * 10) + "   " + (int) (Math.random() * 10));
+            System.out.print("Play again?: ");
         }
     }
 }
