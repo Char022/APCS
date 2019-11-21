@@ -7,8 +7,7 @@ public class Main {
         
     public static void main(String[] args) throws InterruptedException{
 	// write your code here
-        testScores();
-        stringInput();
+        multiplicationTable();
     }
 
     public static void testScores(){
@@ -52,5 +51,13 @@ public class Main {
             Thread.sleep(250);
         }
 
+    }
+    public static void multiplicationTable(){
+        for(int i = 1; i <= 20; i++){
+            for(int j = i; j <= 20 * i; j+=i){
+                System.out.format("%5s", j);
+            }
+            System.out.println();
+        }
     }
 }
