@@ -7,7 +7,8 @@ public class Main {
         
     public static void main(String[] args) throws InterruptedException{
 	// write your code here
-        
+        multiplicationTable();
+        slotMachine();
     }
     public static void awards(){
         Scanner userInput = new Scanner(System.in);
@@ -116,6 +117,26 @@ public class Main {
         for (int i = 0; i < input.length(); i++) {
             System.out.println(input.charAt(i));
             Thread.sleep(250);
+        }
+    }
+
+    public static void multiplicationTable(){
+        for(int i = 1; i <= 20; i++){
+            for(int j = i; j <= 20 * i; j+=i){
+                System.out.format("%5s", j);
+            }
+            System.out.println();
+        }
+    }
+    public static void slotMachine(){
+        Scanner userInput = new Scanner(System.in);
+
+        System.out.println((int) (Math.random() * 10) + "   " + (int) (Math.random() * 10) + "   " + (int) (Math.random() * 10));
+        System.out.print("Play again?: ");
+
+        while(userInput.nextLine().contains("y")) {
+            System.out.println((int) (Math.random() * 10) + "   " + (int) (Math.random() * 10) + "   " + (int) (Math.random() * 10));
+            System.out.print("Play again?: ");
         }
     }
 }
