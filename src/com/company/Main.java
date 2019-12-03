@@ -7,8 +7,10 @@ public class Main {
         
     public static void main(String[] args) throws InterruptedException{
 	// write your code here
-        multiplicationTable();
-        slotMachine();
+        //multiplicationTable();
+        //slotMachine();
+        rockPaperScissors();
+        classworkCounter();
     }
     public static void awards(){
         Scanner userInput = new Scanner(System.in);
@@ -138,5 +140,77 @@ public class Main {
             System.out.println((int) (Math.random() * 10) + "   " + (int) (Math.random() * 10) + "   " + (int) (Math.random() * 10));
             System.out.print("Play again?: ");
         }
+    }
+
+    public static void rockPaperScissors(){
+        Scanner userInput = new Scanner(System.in);
+
+        int userChoice, machineChoice;
+
+        System.out.print("Enter your throw (1=Rock, 2=Paper, 3=Scissors): ");
+        userChoice = userInput.nextInt();
+
+        machineChoice = (int)(Math.random() * 3) + 1;
+
+        System.out.print("Player throws ");
+        rockPaperScissors(userChoice);
+
+        System.out.print("Computer throws ");
+        rockPaperScissors(machineChoice);
+
+        if(userChoice == 1){
+            switch(machineChoice){
+                case 1: System.out.println("Tie!"); break;
+                case 2: System.out.println("Computer wins!"); break;
+                case 3: System.out.println("Player wins!"); break;
+                default: break;
+            }
+        }
+        if(userChoice == 2){
+            switch(machineChoice){
+                case 2: System.out.println("Tie!"); break;
+                case 3: System.out.println("Computer wins!"); break;
+                case 1: System.out.println("Player wins!"); break;
+                default: break;
+            }
+        }
+        if(userChoice == 3){
+            switch(machineChoice){
+                case 3: System.out.println("Tie!"); break;
+                case 1: System.out.println("Computer wins!"); break;
+                case 2: System.out.println("Player wins!"); break;
+                default: break;
+            }
+        }
+    }
+
+    public static void rockPaperScissors(int input){
+        switch(input){
+            case 1:
+                System.out.println("ROCK");
+                break;
+            case 2:
+                System.out.println("PAPER");
+                break;
+            case 3:
+                System.out.println("SCISSORS");
+                break;
+            default:
+                System.out.println("ERROR");
+                break;
+        }
+    }
+
+    public static void classworkCounter(){
+        final int LIMIT = 5;
+
+        int count = 0;
+
+        while (count < LIMIT) {
+            count++;
+            System.out.println(count);
+        }
+
+        System.out.println("Done!");
     }
 }
