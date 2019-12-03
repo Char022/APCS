@@ -9,7 +9,7 @@ public class Main {
 	// write your code here
         //multiplicationTable();
         //slotMachine();
-        classworkCounter();
+        iwanttokillmyself();
     }
     public static void awards(){
         Scanner userInput = new Scanner(System.in);
@@ -212,4 +212,64 @@ public class Main {
 
         System.out.println("Done!");
     }
+
+    public static void iwanttokillmyself(){
+        String answer = "BRAIN";
+        System.out.println("word guess");
+        System.out.println("-----");
+        Scanner userInput = new Scanner(System.in);
+        String previousOutput = "-----";
+        int score = 100;
+
+        String userGuess;
+        boolean isFinished = false;
+        while(!isFinished){
+            System.out.println("enter guess");
+            userGuess = userInput.nextLine();
+            for(int i = 0; i < answer.length(); i++){
+                if(userGuess.charAt(0) == answer.charAt(i)){
+                    System.out.print(userGuess.charAt(0));
+                    String newPreviousOutput = "";
+                    for(int j = 0; j < previousOutput.length(); j++){
+                        if(j == i){
+                            newPreviousOutput += userGuess.charAt(0);
+                        }else{
+                            newPreviousOutput += previousOutput.charAt(j);
+                        }
+                    }
+                    previousOutput = newPreviousOutput;
+                }else{
+                    System.out.print(previousOutput.charAt(i));
+                }
+            }
+            System.out.println("");
+            if(answer.contains(userGuess) && previousOutput.contains(userGuess) || userGuess.charAt(0) == '!'){}else{
+                score -= 10;
+            }
+            if(userGuess.charAt(0) == '!'){
+                System.out.println("Guess");
+                if(userInput.nextLine().equals(answer)){
+                    System.out.println("you win");
+                    System.out.println("score " + score);
+                }else{
+                    System.out.println("you lose");
+                }
+                isFinished = true;
+            }
+            if(score <= 0 || previousOutput.equals(answer)) {
+                if (isFinished) {
+                } else {
+                    isFinished = true;
+                    if (previousOutput.equals(answer)) {
+                        System.out.println("you win");
+                        System.out.println("score " + score);
+                    } else {
+                        System.out.println("you lose");
+                    }
+                }
+            }
+        }
+        System.out.println("answer was " + answer);
+    }
 }
+
