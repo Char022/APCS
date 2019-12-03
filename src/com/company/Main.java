@@ -9,7 +9,6 @@ public class Main {
 	// write your code here
         //multiplicationTable();
         //slotMachine();
-        rockPaperScissors();
         classworkCounter();
     }
     public static void awards(){
