@@ -34,7 +34,7 @@ public class Main {
                     hardMode(numberOfQuestions);
                     break;
                 default:
-                    System.out.println("no");
+                    System.out.println("That isn't a choice");
                     break;
             }
         }
