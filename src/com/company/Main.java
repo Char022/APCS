@@ -8,8 +8,8 @@ public class Main {
     public static void main(String[] args) throws InterruptedException{
 	// write your code here
         //multiplicationTable();
-        //slotMachine();
-        iwanttokillmyself();
+        slotMachine();
+        guessingGame();
     }
     public static void awards(){
         Scanner userInput = new Scanner(System.in);
@@ -213,7 +213,7 @@ public class Main {
         System.out.println("Done!");
     }
 
-    public static void iwanttokillmyself(){
+    public static void guessingGame(){
         String answer = "BRAIN";
         System.out.println("word guess");
         System.out.println("-----");
