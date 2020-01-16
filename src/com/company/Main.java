@@ -15,7 +15,7 @@ public class Main {
 
         cTemp = (double)5/(double)9*(fTemp-32);
         System.out.println("The Celsius temperature is: " + decimal.format(cTemp) + " degrees.");
-
+//yeet
     }
 
     public static void celsiusToFahrenheit(){
