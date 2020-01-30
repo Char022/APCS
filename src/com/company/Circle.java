@@ -24,4 +24,7 @@ public class Circle {
     public double getCircumference(){
         return (radius * 2 * Math.PI);
     }
+    public static void displayArea(){
+        System.out.println("The formula for area is PI * radius * radius");
+    }
 }

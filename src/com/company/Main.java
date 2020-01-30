@@ -17,6 +17,7 @@ public class Main {
         System.out.println("Circle radius: " + spot.getRadius());
         System.out.println("Circle area: " +spot.area());
         System.out.println("Circumference: " + spot.getCircumference());
+        Circle.displayArea();
     }
 }
 
