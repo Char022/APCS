@@ -1,10 +1,11 @@
 package com.company;
 
 public class Circle {
+    private static final double PI = 3.14;
     private double radius;
 
-    public Circle(){
-        radius = 1;
+    public Circle(int startRadius){
+        radius = startRadius;
     }
 
     public void setRadius(double newRadius){
@@ -13,7 +14,7 @@ public class Circle {
 
     public double area(){
         double circleArea;
-        circleArea = Math.PI * radius * radius;
+        circleArea = PI * radius * radius;
 
         return circleArea;
     }
@@ -22,7 +23,7 @@ public class Circle {
         return radius;
     }
     public double getCircumference(){
-        return (radius * 2 * Math.PI);
+        return (radius * 2 * PI);
     }
     public static void displayArea(){
         System.out.println("The formula for area is PI * radius * radius");
