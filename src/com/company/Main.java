@@ -8,9 +8,14 @@ public class Main {
 
 
 
-    public static void main(String[] args) throws InterruptedException{
+    public static void main(String[] args){
 	// write your code here
-        x
+        Circle spot = new Circle();
+
+        spot.setRadius(5);
+
+        System.out.println("Circle radius: " + spot.getRadius());
+        System.out.println("Circle area: " +spot.area());
     }
 }
 
