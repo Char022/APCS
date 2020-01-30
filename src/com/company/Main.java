@@ -71,7 +71,6 @@ public class Main {
             System.out.print("Enter your choice: ");
 
             choice = userInput.nextInt();
-
         }
 
 
