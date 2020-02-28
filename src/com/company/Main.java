@@ -1,5 +1,7 @@
 package com.company;
 
+import java.util.Random;
+
 public class Main {
 
     public static void main(String[] args){
@@ -20,5 +22,15 @@ public class Main {
         System.out.println("Blast off!!");
         }
     }
+
+    public static int test1(int min, int max){
+        Random random = new Random();
+        int randomNum = random.nextInt(max - min + 1)+min;
+        System.out.println("The random number between " + min + " and " + max + " is: " + randomNum);
+        return randomNum;
+    }
+
+
+
 }
 
