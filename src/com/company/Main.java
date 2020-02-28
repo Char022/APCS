@@ -35,6 +35,10 @@ public class Main {
         return name + ", " + grade + ", " + GPA;
     }
 
-
+    public static double converter(int fahrenheit){
+        double celsius = (fahrenheit -32) * (5/9);
+        System.out.println(celsius); /*I'm assuming outputting with SOUTab is implied in this question too*/
+        return celsius;
+    }
 }
 
