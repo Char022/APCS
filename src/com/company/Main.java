@@ -30,6 +30,10 @@ public class Main {
         return randomNum;
     }
 
+    public static String studentInfo(String name, int grade, double GPA){
+        System.out.println(name + ", " + grade + ", " + GPA);
+        return name + ", " + grade + ", " + GPA;
+    }
 
 
 }
